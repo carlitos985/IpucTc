@@ -26,3 +26,68 @@ a{
     color: inherit;
     text-decoration: none;
 }
+
+/*Clases reutilizables*/
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*NavBar*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 5;
+    background-color: black;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+.logo img {
+    width: 200px;
+    
+}
+.btn-close {
+    display: none;
+}
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+.list-link {
+    transition: color .3s;
+}
+.list-link:hover {
+    color: cyan;
+}
+.actions {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.actions button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    color: white;
+}
+button.btn-open {
+    font-size: 28px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
