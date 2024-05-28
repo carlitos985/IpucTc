@@ -118,6 +118,7 @@ nav {
     transition: color .3s;
     font-weight: 600;
     font-size: 18px;
+}
 .list-link:hover {
     color: var(--txt-second);
 }
