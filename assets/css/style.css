@@ -28,6 +28,15 @@ a{
     color: inherit;
     text-decoration: none;
 }
+/*Reset de los botones*/
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    color: white;
+}
 
 /*Clases reutilizables*/
 .container {
@@ -44,7 +53,7 @@ a{
     width: 100%;
     height: var(--header-heigth);
     z-index: 5;
-    background-color: black;
+    background: linear-gradient(rgb(6, 6, 126), blue);
 }
 nav {
     display: flex;
@@ -59,10 +68,10 @@ nav {
 .logo span{
     color: var(--txt-second)
 }
-/*
-.btn-close {
+.btn-close{
     display: none;
-}*/
+}
+
 .menu-list {
     list-style: none;
     padding: 0;
@@ -75,15 +84,40 @@ nav {
     .nav-menu {
         position: fixed;
         top: var(--header-heigth);
-        left: 0;
-        width: 80%;
-        border: 1px solid;
+        left: -100%;
+        width: 95%;
         height: calc(95vh - var(--header-heigth));
+        padding: 60px 20px 40px;
+        background: linear-gradient(blue, white);
+        transition: left .5s ease-in-out;
+                
+    }
+    .show-menu{
+        left: 0;
+    }
+    .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+        display: block;
+    }
+    .menu-list{
+        flex-direction: column;
     }
 }
+/* desde 7868px para arriba */
+@media (min-width: 768px){
+    .btn-open{
+        display: none;
+    }
+}
+
+
 .list-link {
     transition: color .3s;
-}
+    font-weight: 600;
+    font-size: 18px;
 .list-link:hover {
     color: var(--txt-second);
 }
@@ -109,4 +143,4 @@ a {
     text-decoration: none;
 }
 
-/*39"*/
+/*53"*/
